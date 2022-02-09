@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+
+    <style>
+        span{
+           font-weight: bolder; 
+        }
+        button{
+            padding: 15px 20px;
+            border-radius: 30px;
+            font-size: 20px;
+        }
+        body{
+            text-align: center;
+        }
+        .tokyo{
+            font-size: 40px;
+        }
+        .tomorrow, .saturday,.sunday{
+            font-size: 25px;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="tokyo">
+        <h2>🌤️ <br>Currently 21 in Tokyo </h2>
+        <p>13 / <span>23</span></p>
+    </div>
+
     
+    <div class="tomorrow" >
+        <h4>🌧️ Tomorrow</h4>
+        <p> 10  / <span>22</span></p>
+    </div>
+
+    <div class="saturday" >
+        <h4> 🌥️Saturday</h4>
+        <p> 15  / <span>17</span></p>
+    </div>
+
+    <div class="sunday" >
+        <h4>🌞 Sunday</h4>
+        <p> 25 / <span>28</span></p>
+    </div>
+    <button>Change City</button>
+
+    <div class="footer">
+        Coded by Memory Wabwile
+    </div>
 </body>
+
 </html>
