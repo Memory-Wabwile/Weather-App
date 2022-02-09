@@ -15,6 +15,17 @@
             padding: 15px 20px;
             border-radius: 30px;
             font-size: 20px;
+            margin-top: 2%;
+            border: none;
+            background-color: blue;
+            color:white ;
+            box-shadow: 5px 5px 10px rgb(94, 91, 91);
+        }
+        button:hover{
+            background-color:white ;
+            color:blue ;
+            border: 2px solid blue;
+            cursor: pointer;
         }
         body{
             text-align: center;
@@ -22,32 +33,48 @@
         .tokyo{
             font-size: 40px;
         }
+        .tokyo>h2{
+            color: blue;
+        }
         .tomorrow, .saturday,.sunday{
             font-size: 25px;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 6%;
+            padding: 1px;
+        }
+        .tomorrow:hover,
+        .saturday:hover,
+        .sunday:hover{
+            background-color: bisque;
+            border-radius: 10px;
+        }
+        .footer{
+            margin-top: 2%;
         }
     </style>
 </head>
 
 <body>
     <div class="tokyo">
-        <h2>🌤️ <br>Currently 21 in Tokyo </h2>
-        <p>13 / <span>23</span></p>
+        <h2>🌤️ <br>Currently 21° in Tokyo </h2>
+        <p>13° / <span>23°</span></p>
     </div>
 
     
     <div class="tomorrow" >
         <h4>🌧️ Tomorrow</h4>
-        <p> 10  / <span>22</span></p>
+        <p> 10°  / <span>22°</span></p>
     </div>
 
     <div class="saturday" >
         <h4> 🌥️Saturday</h4>
-        <p> 15  / <span>17</span></p>
+        <p> 15°  / <span>17°</span></p>
     </div>
 
     <div class="sunday" >
         <h4>🌞 Sunday</h4>
-        <p> 25 / <span>28</span></p>
+        <p> 25° / <span>28°</span></p>
     </div>
     <button>Change City</button>
 
