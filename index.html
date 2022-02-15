@@ -40,8 +40,8 @@
             font-size: 25px;
             width: 50%;
             margin-left: 25%;
-            margin-top: 6%;
-            padding: 1px;
+            margin-top: 2%;
+            padding: 2px;
         }
         .tomorrow:hover,
         .saturday:hover,
@@ -57,7 +57,7 @@
 
 <body>
     <div class="tokyo">
-        <h2>🌤️ <br>Currently 21° in Tokyo </h2>
+        <h2 #first>🌤️ <br>Currently 21° in Tokyo </h2>
         <p>13° / <span>23°</span></p>
     </div>
 
@@ -82,5 +82,24 @@
         Coded by Memory Wabwile
     </div>
 </body>
+
+<script>
+
+    function getData(){
+    let city = prompt("What city do you live in")
+    let temp = prompt ("What temperature is it there")
+
+    let current = document.querySelector("h2");
+     if (temp>0){
+    current.innerHTML = "😃 <br> Currently " + " " + temp + "° C " + " "+"in" +" "+ city;
+     }
+     else{
+        current.innerHTML = " 😞 <br> Currently " + " " + temp + "° C" +" "+ "in" +" "+ city;
+     }
+    }
+    let button = document.querySelector("button")
+button.addEventListener("click" , getData)
+
+</script>
 
 </html>
