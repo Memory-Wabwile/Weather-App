@@ -8,48 +8,58 @@
     <title>Weather App</title>
 
     <style>
-        span{
-           font-weight: bolder; 
+        span {
+            font-weight: bolder;
         }
-        button{
+
+        button {
             padding: 15px 20px;
             border-radius: 30px;
             font-size: 20px;
             margin-top: 2%;
             border: none;
             background-color: blue;
-            color:white ;
+            color: white;
             box-shadow: 5px 5px 10px rgb(94, 91, 91);
         }
-        button:hover{
-            background-color:white ;
-            color:blue ;
+
+        button:hover {
+            background-color: white;
+            color: blue;
             border: 2px solid blue;
             cursor: pointer;
         }
-        body{
+
+        body {
             text-align: center;
         }
-        .tokyo{
+
+        .tokyo {
             font-size: 40px;
         }
-        .tokyo>h2{
+
+        .tokyo>h2 {
             color: blue;
         }
-        .tomorrow, .saturday,.sunday{
+
+        .tomorrow,
+        .saturday,
+        .sunday {
             font-size: 25px;
             width: 50%;
             margin-left: 25%;
             margin-top: 2%;
             padding: 2px;
         }
+
         .tomorrow:hover,
         .saturday:hover,
-        .sunday:hover{
+        .sunday:hover {
             background-color: bisque;
             border-radius: 10px;
         }
-        .footer{
+
+        .footer {
             margin-top: 2%;
         }
     </style>
@@ -61,18 +71,18 @@
         <p>13° / <span>23°</span></p>
     </div>
 
-    
-    <div class="tomorrow" >
+
+    <div class="tomorrow">
         <h4>🌧️ Tomorrow</h4>
-        <p> 10°  / <span>22°</span></p>
+        <p> 10° / <span>22°</span></p>
     </div>
 
-    <div class="saturday" >
+    <div class="saturday">
         <h4> 🌥️Saturday</h4>
-        <p> 15°  / <span>17°</span></p>
+        <p> 15° / <span>17°</span></p>
     </div>
 
-    <div class="sunday" >
+    <div class="sunday">
         <h4>🌞 Sunday</h4>
         <p> 25° / <span>28°</span></p>
     </div>
@@ -84,22 +94,19 @@
 </body>
 
 <script>
+    function getData() {
+        let city = prompt("What city do you live in")
+        let temp = prompt("What temperature is it there")
 
-    function getData(){
-    let city = prompt("What city do you live in")
-    let temp = prompt ("What temperature is it there")
-
-    let current = document.querySelector("h2");
-     if (temp>0){
-    current.innerHTML = "😃 <br> Currently " + " " + temp + "° C " + " "+"in" +" "+ city;
-     }
-     else{
-        current.innerHTML = " 😞 <br> Currently " + " " + temp + "° C" +" "+ "in" +" "+ city;
-     }
+        let current = document.querySelector("h2");
+        if (temp > 0) {
+            current.innerHTML = "😃 <br> Currently " + " " + temp + "° C " + " " + "in" + " " + city;
+        } else {
+            current.innerHTML = " 😞 <br> Currently " + " " + temp + "° C" + " " + "in" + " " + city;
+        }
     }
     let button = document.querySelector("button")
-button.addEventListener("click" , getData)
-
+    button.addEventListener("click", getData)
 </script>
 
 </html>
